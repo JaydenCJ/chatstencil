@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="400" viewBox="0 0 760 400" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14">
+  <rect width="760" height="400" rx="10" fill="#0d1117"/>
+  <rect width="760" height="34" rx="10" fill="#161b22"/>
+  <rect y="24" width="760" height="10" fill="#161b22"/>
+  <circle cx="20" cy="17" r="6" fill="#ff5f56"/>
+  <circle cx="40" cy="17" r="6" fill="#ffbd2e"/>
+  <circle cx="60" cy="17" r="6" fill="#27c93f"/>
+  <text x="380" y="21" fill="#8b949e" text-anchor="middle" font-size="12">chatstencil — golden-testing the exact prompt string</text>
+  <g fill="#c9d1d9">
+    <text x="16" y="62"><tspan fill="#7ee787">$</tspan> chatstencil check -t support-bot.jinja -f fixtures/ -g goldens/</text>
+    <text x="16" y="88"><tspan fill="#f85149" font-weight="bold">MISMATCH</tspan>  smalltalk</text>
+    <text x="16" y="112" fill="#8b949e">--- golden:smalltalk--support-bot.golden.txt</text>
+    <text x="16" y="134" fill="#8b949e">+++ rendered:now</text>
+    <text x="16" y="156" fill="#a5d6ff">@@ -1,5 +1,3 @@</text>
+    <text x="16" y="180"> &lt;|im_start|&gt;system\n</text>
+    <text x="16" y="202" fill="#f85149">-You are a concise assistant. Answer in one sentence.&lt;|im_end|&gt;\n</text>
+    <text x="16" y="224" fill="#f85149">-&lt;|im_start|&gt;user\n</text>
+    <text x="16" y="246" fill="#f85149">-What does a chat template do?&lt;|im_end|&gt;\n</text>
+    <text x="16" y="268" fill="#f85149">-&lt;|im_start|&gt;assistant\n</text>
+    <text x="16" y="290" fill="#7ee787">+You are a concise assistant. Answer in one sentence.&lt;|im_end|&gt;&lt;|im_start|&gt;user\n</text>
+    <text x="16" y="312" fill="#7ee787">+What does a chat template do?&lt;|im_end|&gt;&lt;|im_start|&gt;assistant\n</text>
+    <text x="16" y="338">1 checked, <tspan fill="#f85149">1 failing</tspan></text>
+    <text x="16" y="372" fill="#8b949e">a stray '-' in {%- endfor -%} just deleted every turn separator — caught before the model saw it</text>
+  </g>
+</svg>

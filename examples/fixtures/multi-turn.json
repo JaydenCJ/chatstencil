@@ -1,0 +1,11 @@
+{
+  "name": "multi-turn",
+  "description": "Two full exchanges; catches templates that only handle one turn.",
+  "add_generation_prompt": true,
+  "messages": [
+    { "role": "system", "content": "You are a helpful sous-chef." },
+    { "role": "user", "content": "How long do I boil an egg?" },
+    { "role": "assistant", "content": "Seven minutes for jammy, ten for hard." },
+    { "role": "user", "content": "And at high altitude?" }
+  ]
+}

@@ -1,0 +1,9 @@
+<|im_start|>system
+You are a helpful sous-chef.<|im_end|>
+<|im_start|>user
+How long do I boil an egg?<|im_end|>
+<|im_start|>assistant
+Seven minutes for jammy, ten for hard.<|im_end|>
+<|im_start|>user
+And at high altitude?<|im_end|>
+<|im_start|>assistant

@@ -1,0 +1,17 @@
+{#- A ChatML-flavored template with house rules:
+    - at most one system message, and it must come first
+    - content is trimmed so fixture formatting cannot leak into the prompt -#}
+{%- set ns = namespace(seen_system=false) -%}
+{%- for message in messages -%}
+{%- if message.role == 'system' -%}
+{%- if ns.seen_system or not loop.first -%}
+{{ raise_exception('support-bot allows a single leading system message') }}
+{%- endif -%}
+{%- set ns.seen_system = true -%}
+{%- endif -%}
+<|im_start|>{{ message.role }}
+{{ message.content | trim }}<|im_end|>
+{% endfor -%}
+{%- if add_generation_prompt -%}
+<|im_start|>assistant
+{% endif -%}

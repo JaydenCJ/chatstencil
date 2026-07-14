@@ -1,0 +1,8 @@
+{
+  "name": "no-system",
+  "description": "No system message; many templates mishandle this branch.",
+  "add_generation_prompt": true,
+  "messages": [
+    { "role": "user", "content": "Summarize RFC 2119 in one line.\nUse plain words." }
+  ]
+}

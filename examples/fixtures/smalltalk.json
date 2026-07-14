@@ -1,0 +1,9 @@
+{
+  "name": "smalltalk",
+  "description": "A system prompt plus a single user turn, ready for generation.",
+  "add_generation_prompt": true,
+  "messages": [
+    { "role": "system", "content": "You are a concise assistant. Answer in one sentence." },
+    { "role": "user", "content": "What does a chat template do?" }
+  ]
+}
